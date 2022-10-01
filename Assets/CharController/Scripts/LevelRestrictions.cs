@@ -24,9 +24,12 @@ public class LevelRestrictions : MonoBehaviour
 
     private void LateUpdate()
     {
-        var posX = Mathf.Clamp(Player.position.x, PlayerXMin, PlayerXMax);
-        var posZ = Mathf.Clamp(Player.position.z, PlayerZMin, PlayerZMax);
-        Player.position = new Vector3(posX, 0, posZ);
+        if (Player)
+        {
+            var posX = Mathf.Clamp(Player.position.x, PlayerXMin, PlayerXMax);
+            var posZ = Mathf.Clamp(Player.position.z, PlayerZMin, PlayerZMax);
+            Player.position = new Vector3(posX, 0, posZ);
+        }
 
         var posXCam = Mathf.Clamp(Camera.position.x, CamXMin, CamXMax);
         var posZCam = Mathf.Clamp(Camera.position.z, CamZMin, CamZMax);

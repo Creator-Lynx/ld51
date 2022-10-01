@@ -17,18 +17,21 @@ public class PlayerCursor : MonoBehaviour
     }
 
     private void Update()
-    {  
-        transform.position = Player.position + Vector3.up;
-
-        var mouseX = Input.GetAxis("Mouse X");
-        var mouseY = Input.GetAxis("Mouse Y");
-        var mouseOffset = new Vector3(mouseX, 0, mouseY);
-
-        _cursor.localPosition += mouseOffset * _speed;
-
-        if (_cursor.localPosition.magnitude > _radius)
+    {
+        if (Player)
         {
-            _cursor.localPosition = _cursor.localPosition.normalized * _radius;
+            transform.position = Player.position + Vector3.up;
+
+            var mouseX = Input.GetAxis("Mouse X");
+            var mouseY = Input.GetAxis("Mouse Y");
+            var mouseOffset = new Vector3(mouseX, 0, mouseY);
+
+            _cursor.localPosition += mouseOffset * _speed;
+
+            if (_cursor.localPosition.magnitude > _radius)
+            {
+                _cursor.localPosition = _cursor.localPosition.normalized * _radius;
+            }
         }
     }
 

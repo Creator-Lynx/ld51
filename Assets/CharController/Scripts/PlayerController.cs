@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {    
     public PlayerCursor PlayerCursor;
+    public Transform PlayerBody;
     public Transform WeaponsOrigin;
     public PlayerParameters parameters;
     public int CurHealth { get; private set; }
@@ -37,15 +38,20 @@ public class PlayerController : MonoBehaviour
         var dir = new Vector3(hor, 0, vert).normalized;
         transform.position += dir * parameters.playerMovementSpeed * Time.deltaTime;
 
-        var lookDir = PlayerCursor.GetDirection();
+        var cursorDir = PlayerCursor.GetDirection();
+        var lookDir = new Vector3(cursorDir.x, 0, cursorDir.y) * -1;
 
-        if (lookDir.x > 0)
+        //if (lookDir.x > 0)
+        //{
+        //    transform.rotation = Quaternion.Euler(0, -90, 0);
+        //}
+        //else if (lookDir.x < 0)
+        //{
+        //    transform.rotation = Quaternion.Euler(0, 90, 0);
+        //}
+        if (lookDir != Vector3.zero)
         {
-            transform.rotation = Quaternion.Euler(0, -90, 0);
-        }
-        else if (lookDir.x < 0)
-        {
-            transform.rotation = Quaternion.Euler(0, 90, 0);
+            PlayerBody.rotation = Quaternion.LookRotation(lookDir);
         }
     }
 
