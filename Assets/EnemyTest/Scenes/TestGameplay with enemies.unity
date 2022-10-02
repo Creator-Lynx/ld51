@@ -1838,9 +1838,9 @@ MonoBehaviour:
     playerMaxHealth: 100
     playerMovementSpeed: 5
     additionProjectilesCount: 0
-    baseDamageRange: 100
-    baseAttackSpeed: 100
-    baseAttackDuration: 100
+    baseDamageRange: 1
+    baseAttackSpeed: 1
+    baseAttackDuration: 1
     baseReloadSpeed: 1
   ActiveWeapon: {fileID: 0}
   PassiveWeapons: []
@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponsToSelect: []
-  CasePref: {fileID: 4881942963678020985, guid: 686f52f025800fd4987b7fd00c8df8da, type: 3}
+  CasePref: {fileID: 4881942963678020965, guid: 686f52f025800fd4987b7fd00c8df8da, type: 3}
   CaseOrigin: {fileID: 377955141}
 --- !u!1 &1795849123
 GameObject:
