@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     public bool IsCorrupted { get; private set; } = false;
     public Action OnCorrupted;
 
+    public ParticleSystem CorruptedPart;
+
     private GameManager _manager;
 
     private void Start()
@@ -29,7 +31,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if(_manager.IsActivePhase)
+        if (_manager.IsActivePhase)
         {
             Corrupt();
         }
@@ -72,6 +74,7 @@ public class Enemy : MonoBehaviour
     {
         if (!IsCorrupted)
         {
+            CorruptedPart.Play();
             IsCorrupted = true;
             //todo: запускать эффект
             GetComponentInChildren<Animator>().SetBool("IsEvil", true);            

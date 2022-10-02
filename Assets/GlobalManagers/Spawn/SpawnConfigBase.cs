@@ -23,15 +23,15 @@ public abstract class SpawnConfigBase : ScriptableObject
         var ray1 = cam.ScreenPointToRay(Vector3.zero);
         if (Physics.Raycast(ray1, out var hit1, 100))
         {
-            downBorder = hit1.point.z - 1;
-            leftBorder = hit1.point.x - 1;
+            downBorder = hit1.point.z - 1.5f;
+            leftBorder = hit1.point.x - 1.5f;
         }
 
         var ray2 = cam.ScreenPointToRay(new Vector3(Screen.width, Screen.height));
         if (Physics.Raycast(ray2, out var hit2, 100))
         {
-            upBorder = hit2.point.z + 1;
-            rightBorder = hit2.point.x + 1;
+            upBorder = hit2.point.z + 1.5f;
+            rightBorder = hit2.point.x + 1.5f;
         }
     }
 

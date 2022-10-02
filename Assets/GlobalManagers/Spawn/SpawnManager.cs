@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
         var cam = Camera.main;
         var ray1 = cam.ScreenPointToRay(new Vector3(0, Screen.height));
