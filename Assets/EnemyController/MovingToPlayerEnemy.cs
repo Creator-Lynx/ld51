@@ -11,7 +11,7 @@ public class MovingToPlayerEnemy : Enemy
 
     protected override void OnStart()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").transform;
+        Player = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
 
     protected override void OnUpdate()

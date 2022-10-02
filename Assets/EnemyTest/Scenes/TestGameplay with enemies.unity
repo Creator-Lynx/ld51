@@ -1498,8 +1498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1456c9dfbe5cb4e95e180042620d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194227}
-  rabbit: {fileID: 741210902955570347, guid: 538627206f975e649b23377e237b27b8, type: 3}
+  spawns:
+  - {fileID: 11400000, guid: 5b1bc32b9cb27f9449483c95233e6d1d, type: 2}
 --- !u!1 &560171494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,7 +1640,7 @@ MonoBehaviour:
   PlayerBody: {fileID: 869923544}
   WeaponsOrigin: {fileID: 2071078102}
   parameters:
-    playerMaxHealth: 10000000
+    playerMaxHealth: 100
     playerMovementSpeed: 5
     additionProjectilesCount: 0
     baseDamageRange: 100
