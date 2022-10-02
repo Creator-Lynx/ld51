@@ -22,6 +22,11 @@ public class MovingToPlayerEnemy : Enemy
             dir = new Vector3(dir.x, 0, dir.z);
             transform.position += dir * MoveSpeed * Time.deltaTime;
             transform.rotation = Quaternion.LookRotation(dir);
+
+            if(Vector3.Distance(transform.position, Player.position) < 9f)
+            {
+                Corrupt();
+            }
         }
     }
 }

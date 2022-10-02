@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +10,9 @@ public class GameManager : MonoBehaviour
     public int Score { get; private set; } = 0;
     public int KillCount { get; private set; } = 0;
     public DeathScreen DeathScreen;
+
+    public Action OnActivePhase;
+    public bool IsActivePhase { get; private set; } = false;
 
     private string higscorePath =>
         Application.streamingAssetsPath + "/highscore.txt";
@@ -25,6 +29,12 @@ public class GameManager : MonoBehaviour
         }
 
         FindObjectOfType<PlayerController>().OnDeath += OnPlayerDead;
+    }
+
+    public void StartActivePhase()
+    {
+        IsActivePhase = true;
+        OnActivePhase?.Invoke();
     }
 
     public void AddScore(int score)

@@ -12,13 +12,15 @@ public class Enemy : MonoBehaviour
 
     public virtual float attackInterval => 0.5f;
     private float _timer = 0;
-
-    public Material CorruptedMat;
+    
     public bool IsCorrupted { get; private set; } = false;
     public Action OnCorrupted;
 
+    private GameManager _manager;
+
     private void Start()
     {
+        _manager = FindObjectOfType<GameManager>();
         CurHealth = MaxHealth;
         OnStart();
     }
@@ -27,6 +29,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if(_manager.IsActivePhase)
+        {
+            Corrupt();
+        }
         _timer -= Time.deltaTime;
         OnUpdate();
     }
@@ -36,6 +42,7 @@ public class Enemy : MonoBehaviour
     public void SetDamage(int dmg)
     {
         CurHealth -= dmg;
+        Corrupt();
         if(CurHealth <= 0)
         {
             FindObjectOfType<GameManager>().AddScore(KillScore);
@@ -66,7 +73,8 @@ public class Enemy : MonoBehaviour
         if (!IsCorrupted)
         {
             IsCorrupted = true;
-            GetComponentInChildren<Animator>().SetBool("IsEvil", true);
+            //todo: запускать эффект
+            GetComponentInChildren<Animator>().SetBool("IsEvil", true);            
             OnCorrupted?.Invoke();            
         }
     }
