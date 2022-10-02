@@ -75,8 +75,7 @@ public class Enemy : MonoBehaviour
         if (!IsCorrupted)
         {
             CorruptedPart.Play();
-            IsCorrupted = true;
-            //todo: запускать эффект
+            IsCorrupted = true;            
             GetComponentInChildren<Animator>().SetBool("IsEvil", true);            
             OnCorrupted?.Invoke();            
         }

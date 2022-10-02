@@ -14,12 +14,18 @@ public class GameManager : MonoBehaviour
     public Action OnActivePhase;
     public bool IsActivePhase { get; private set; } = false;
 
+    public WeaponsDataBase weapDB;
+    public WeaponSelectionDialog weaponSelectionDialog;
+
     private string higscorePath =>
         Application.streamingAssetsPath + "/highscore.txt";
 
     private void Awake()
-    {        
-        if(!File.Exists(higscorePath))
+    {
+        weapDB = Resources.Load<WeaponsDataBase>("WeaponsDB/Weapons");
+        weapDB.SetNamesAndLevels();
+
+        if (!File.Exists(higscorePath))
         {
             Highcore = 0;
         }

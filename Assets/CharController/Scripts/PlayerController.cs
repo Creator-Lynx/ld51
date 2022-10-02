@@ -15,13 +15,13 @@ public class PlayerController : MonoBehaviour
     public Weapon ActiveWeapon = null;
     public List<Weapon> PassiveWeapons;
 
-    private WeaponsDataBase weapDB;
+    private GameManager _gm;
 
     private void Start()
     {
+        _gm = FindObjectOfType<GameManager>();
         CurHealth = parameters.playerMaxHealth;
-        weapDB = Resources.Load<WeaponsDataBase>("WeaponsDB/Weapons");
-        weapDB.SetNamesAndLevels();
+        
         AddWeapon("Test");
         AddWeapon("Test");
     }
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     public void AddWeapon(string wName)
     {
-        var isActive = weapDB.IsActiveWeapon(wName);        
+        var isActive = _gm.weapDB.IsActiveWeapon(wName);        
         if(isActive)
         {
             AddActiveWeapon(wName);
@@ -125,13 +125,13 @@ public class PlayerController : MonoBehaviour
 
     private Weapon CreateWeapon(string wName, int wLevel)
     {
-        var pref = weapDB.FindWeaponPrefab(wName, wLevel);
+        var pref = _gm.weapDB.FindWeaponPrefab(wName, wLevel);
         var weap = Instantiate(pref, WeaponsOrigin);
         weap.Initialize(parameters);
         return weap;
     }
 
-    private (bool isOnPlayer, int level) GetWeaponStatus(string wName)
+    public (bool isOnPlayer, int level) GetWeaponStatus(string wName)
     {
         if(ActiveWeapon && ActiveWeapon.WeaponName == wName)
         {
