@@ -1451,6 +1451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529129781}
   - component: {fileID: 529129780}
+  - component: {fileID: 529129782}
   m_Layer: 0
   m_Name: '[GAME MANAGER]'
   m_TagString: Untagged
@@ -1485,6 +1486,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529129782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529129779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1456c9dfbe5cb4e95e180042620d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 963194227}
+  rabbit: {fileID: 741210902955570347, guid: 538627206f975e649b23377e237b27b8, type: 3}
 --- !u!1 &560171494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,7 +1640,7 @@ MonoBehaviour:
   PlayerBody: {fileID: 869923544}
   WeaponsOrigin: {fileID: 2071078102}
   parameters:
-    playerMaxHealth: 100
+    playerMaxHealth: 10000000
     playerMovementSpeed: 5
     additionProjectilesCount: 0
     baseDamageRange: 100
@@ -3997,7 +4012,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2127582662}
-  - component: {fileID: 2127582661}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -4005,28 +4019,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &2127582661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127582660}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709c1ce462bc57f4ab0fbc90e4f8de15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 665832425}
-  PlayerXMin: -34
-  PlayerXMax: 34
-  PlayerZMin: -34
-  PlayerZMax: 34
-  Camera: {fileID: 963194228}
-  CamXMin: -21
-  CamXMax: 21
-  CamZMin: -35.7
-  CamZMax: 17.6
 --- !u!4 &2127582662
 Transform:
   m_ObjectHideFlags: 0
@@ -4057,6 +4049,10 @@ PrefabInstance:
     - target: {fileID: 741210902955570347, guid: 538627206f975e649b23377e237b27b8, type: 3}
       propertyPath: m_Name
       value: EnemyRabbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 741210902955570347, guid: 538627206f975e649b23377e237b27b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 741210902955570348, guid: 538627206f975e649b23377e237b27b8, type: 3}
       propertyPath: Damage

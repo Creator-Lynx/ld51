@@ -13,6 +13,10 @@ public class Enemy : MonoBehaviour
     public virtual float attackInterval => 0.5f;
     private float _timer = 0;
 
+    public Material CorruptedMat;
+    public bool IsCorrupted { get; private set; } = false;
+    public Action OnCorrupted;
+
     private void Start()
     {
         CurHealth = MaxHealth;
@@ -54,6 +58,16 @@ public class Enemy : MonoBehaviour
         {
             collision.collider.GetComponent<PlayerController>().SetDamage(Damage);
             _timer = attackInterval;
+        }
+    }
+
+    public void Corrupt()
+    {
+        if (!IsCorrupted)
+        {
+            IsCorrupted = true;
+            GetComponentInChildren<Animator>().SetBool("IsEvil", true);
+            OnCorrupted?.Invoke();            
         }
     }
 }

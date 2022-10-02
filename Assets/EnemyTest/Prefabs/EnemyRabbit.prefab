@@ -66,6 +66,8 @@ MonoBehaviour:
   MaxHealth: 1
   CurHealth: 0
   Damage: 3
+  KillScore: 10
+  CorruptedMat: {fileID: 2100000, guid: 9bca6d2f632c9b042bbe817e20641f1a, type: 2}
   MoveSpeed: 1.73
 --- !u!65 &741210902955570349
 BoxCollider:
