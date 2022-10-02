@@ -19,5 +19,7 @@ MonoBehaviour:
     Prefabs:
     - Level: 1
       Prefab: {fileID: 8962342045644957195, guid: 8241a6110d02e64428fae9427da62485, type: 3}
+      Description: Level 1 of test weapon
     - Level: 2
       Prefab: {fileID: 1273027000308311496, guid: b669d3464719b4146a46af4f4ee04664, type: 3}
+      Description: Level 2 of test weapon

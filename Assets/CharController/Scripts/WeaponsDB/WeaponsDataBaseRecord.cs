@@ -24,4 +24,9 @@ public class WeaponsDataBaseRecord
             weapon.Prefab.WeaponLevel = weapon.Level;
         }
     }
+
+    public string GetDescription(int wLevel)
+    {
+        return Prefabs.First(x => x.Level == wLevel).Description;
+    }
 }

@@ -31,4 +31,9 @@ public class WeaponsDataBase : ScriptableObject
     {
         return records.First(x => x.Name == wName).WeaponIcon;
     }
+
+    public string GetDescription(string wName, int wLevel)
+    {
+        return records.First(x => x.Name == wName).GetDescription(wLevel);
+    }
 }
