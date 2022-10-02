@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour
         if (Player)
         {
             var newPos = new Vector3(Player.position.x, 10, Player.position.z - 9);
-            transform.position = Vector3.Lerp(transform.position, newPos, 0.01f);
+            transform.position = Vector3.Lerp(transform.position, newPos, 1f);
         }
     }
 }

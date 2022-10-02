@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public int MaxHealth = 100;    
     public int CurHealth;
     public int Damage = 3;
+    public int KillScore = 10;
 
     public virtual float attackInterval => 0.5f;
     private float _timer = 0;
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
         CurHealth -= dmg;
         if(CurHealth <= 0)
         {
+            FindObjectOfType<GameManager>().AddScore(KillScore);
             Destroy(gameObject);
         }
     }

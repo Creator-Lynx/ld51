@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerController : MonoBehaviour
 {    
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Transform WeaponsOrigin;
     public PlayerParameters parameters;
     public int CurHealth { get; private set; }
+    public Action OnDeath;
 
     public Weapon ActiveWeapon = null;
     public List<Weapon> PassiveWeapons;
@@ -40,15 +42,7 @@ public class PlayerController : MonoBehaviour
 
         var cursorDir = PlayerCursor.GetDirection();
         var lookDir = new Vector3(cursorDir.x, 0, cursorDir.y) * -1;
-
-        //if (lookDir.x > 0)
-        //{
-        //    transform.rotation = Quaternion.Euler(0, -90, 0);
-        //}
-        //else if (lookDir.x < 0)
-        //{
-        //    transform.rotation = Quaternion.Euler(0, 90, 0);
-        //}
+        
         if (lookDir != Vector3.zero)
         {
             PlayerBody.rotation = Quaternion.LookRotation(lookDir);
@@ -158,6 +152,7 @@ public class PlayerController : MonoBehaviour
         CurHealth -= dmg;
         if(CurHealth <= 0)
         {
+            OnDeath?.Invoke();
             Destroy(gameObject);
         }
     }

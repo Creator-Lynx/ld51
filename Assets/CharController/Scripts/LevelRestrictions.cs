@@ -38,9 +38,12 @@ public class LevelRestrictions : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        DrawRestrictions(PlayerXMin, PlayerXMax, PlayerZMin, PlayerZMax);
-        Gizmos.color = Color.yellow;
-        DrawRestrictions(CamXMin, CamXMax, CamZMin, CamZMax);
+        if (enabled)
+        {
+            DrawRestrictions(PlayerXMin, PlayerXMax, PlayerZMin, PlayerZMax);
+            Gizmos.color = Color.yellow;
+            DrawRestrictions(CamXMin, CamXMax, CamZMin, CamZMax);
+        }
     }
 
     private void DrawRestrictions(float minX, float maxX, float minZ, float maxZ)

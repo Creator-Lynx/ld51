@@ -33,6 +33,12 @@ public class PlayerCursor : MonoBehaviour
                 _cursor.localPosition = _cursor.localPosition.normalized * _radius;
             }
         }
+        else
+        {
+            gameObject.SetActive(false);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     public Vector2 GetDirection()

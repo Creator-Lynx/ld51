@@ -22,6 +22,7 @@ public class PlayerView : MonoBehaviour
     {
         if (player)
         {
+            gameObject.SetActive(true);
             HealthSlider.maxValue = player.parameters.playerMaxHealth;
             HealthSlider.value = player.CurHealth;
             HealthText.text = $"{player.CurHealth}/{player.parameters.playerMaxHealth}";
@@ -37,6 +38,10 @@ public class PlayerView : MonoBehaviour
             {
                 ActiveWeaponPanel.SetActive(false);
             }
+        }
+        else
+        {
+            gameObject.SetActive(false);
         }
     }
 }
