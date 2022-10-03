@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SingleFrog
   m_EditorClassIdentifier: 
   VertSpawnPos: 0
-  HorSpawnPos: 0
+  HorSpawnPos: 1
   EnemyPrefab: {fileID: 2785599225691041107, guid: 4a045b3183af09c4b9a28208cdc054ee, type: 3}

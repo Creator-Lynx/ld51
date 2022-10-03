@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25646e29921f001489fc634f2a4253bc, type: 3}
   m_Name: GigaWolfDur_6
   m_EditorClassIdentifier: 
-  VertSpawnPos: 0
-  HorSpawnPos: 0
-  EnemyPrefab: {fileID: 0}
-  TimeSeconds: 60
-  SpawnCount: 10
-  WaitForEnd: 0
+  VertSpawnPos: 2
+  HorSpawnPos: 1
+  EnemyPrefab: {fileID: 741210902955570348, guid: e738006bf75f66349932660c08dae1f2, type: 3}
+  TimeSeconds: 20
+  SpawnCount: 6
+  WaitForEnd: 1

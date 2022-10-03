@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e36e22d553dc6e4386fda5ef36b4a51, type: 3}
-  m_Name: SingleFrogRight
+  m_Script: {fileID: 11500000, guid: 25646e29921f001489fc634f2a4253bc, type: 3}
+  m_Name: SUKA
   m_EditorClassIdentifier: 
   VertSpawnPos: 0
-  HorSpawnPos: 2
-  EnemyPrefab: {fileID: 2785599225691041107, guid: 4a045b3183af09c4b9a28208cdc054ee, type: 3}
+  HorSpawnPos: 0
+  EnemyPrefab: {fileID: 3878724606436032496, guid: d488da1a8c15c6540b97ea56eba2723f, type: 3}
+  TimeSeconds: 10000
+  SpawnCount: 1000
+  WaitForEnd: 0

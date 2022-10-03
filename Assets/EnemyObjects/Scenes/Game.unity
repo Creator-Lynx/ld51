@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.13758096, g: 0.1239053, b: 0.121242344, a: 1}
+  m_IndirectSpecularColor: {r: 0.13758159, g: 0.123905845, b: 0.12124289, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7192,6 +7192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 30
+  isTimer: 0
   DeathScreen: {fileID: 1035567103}
   weapDB: {fileID: 11400000, guid: 0560cf7b7040b394085afc18e056853e, type: 2}
   weaponSelectionDialog: {fileID: 1717024096}
@@ -7231,13 +7232,30 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f474aead69947da4c9b1f724381ca8b4, type: 2}
   - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
   - {fileID: 11400000, guid: f474aead69947da4c9b1f724381ca8b4, type: 2}
-  - {fileID: 11400000, guid: 04403c05040703c46b79b54c99389315, type: 2}
-  - {fileID: 11400000, guid: 04403c05040703c46b79b54c99389315, type: 2}
-  - {fileID: 11400000, guid: 04403c05040703c46b79b54c99389315, type: 2}
+  - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
+  - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
+  - {fileID: 11400000, guid: d7cfa47a1079ac74899251b27e6aafca, type: 2}
+  - {fileID: 11400000, guid: f474aead69947da4c9b1f724381ca8b4, type: 2}
+  - {fileID: 11400000, guid: db7922890161ae84789cf68fde5c0eed, type: 2}
+  - {fileID: 11400000, guid: 9b6b692a0bf01af468cee2067691f712, type: 2}
+  - {fileID: 11400000, guid: f474aead69947da4c9b1f724381ca8b4, type: 2}
+  - {fileID: 11400000, guid: 69279442a8eca2443b81dc196a8816bb, type: 2}
+  - {fileID: 11400000, guid: f474aead69947da4c9b1f724381ca8b4, type: 2}
+  - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
+  - {fileID: 11400000, guid: b30df3833293d1a4186e0a288f142918, type: 2}
+  - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
+  - {fileID: 11400000, guid: db7922890161ae84789cf68fde5c0eed, type: 2}
+  - {fileID: 11400000, guid: 69279442a8eca2443b81dc196a8816bb, type: 2}
   - {fileID: 11400000, guid: 5b1bc32b9cb27f9449483c95233e6d1d, type: 2}
-  - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
-  - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
-  - {fileID: 11400000, guid: df20f547d2844cc44a89ebcb0923e7d2, type: 2}
+  - {fileID: 11400000, guid: 45302175658162845b3fd3c402c513b3, type: 2}
+  - {fileID: 11400000, guid: 69279442a8eca2443b81dc196a8816bb, type: 2}
+  - {fileID: 11400000, guid: 45302175658162845b3fd3c402c513b3, type: 2}
+  - {fileID: 11400000, guid: f474aead69947da4c9b1f724381ca8b4, type: 2}
+  - {fileID: 11400000, guid: db7922890161ae84789cf68fde5c0eed, type: 2}
+  - {fileID: 11400000, guid: 04403c05040703c46b79b54c99389315, type: 2}
+  - {fileID: 11400000, guid: bba496f0bd1439145aa7ddb339a528eb, type: 2}
+  - {fileID: 11400000, guid: f474aead69947da4c9b1f724381ca8b4, type: 2}
+  - {fileID: 11400000, guid: bba496f0bd1439145aa7ddb339a528eb, type: 2}
   FirstEnemy: {fileID: 741210902955570348, guid: 538627206f975e649b23377e237b27b8, type: 3}
 --- !u!1001 &530499037
 PrefabInstance:

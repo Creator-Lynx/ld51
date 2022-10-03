@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e36e22d553dc6e4386fda5ef36b4a51, type: 3}
   m_Name: GigaWolf
   m_EditorClassIdentifier: 
-  VertSpawnPos: 2
-  HorSpawnPos: 1
+  VertSpawnPos: 0
+  HorSpawnPos: 2
   EnemyPrefab: {fileID: 741210902955570348, guid: e738006bf75f66349932660c08dae1f2, type: 3}
