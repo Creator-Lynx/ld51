@@ -14,7 +14,7 @@ public class Shield_Lvl1 : Weapon
         for(int i = 0; i < enemies.Count; i++)
         {
             var en = enemies[i];
-            if (en)
+            if (en && en.CurHealth > 0)
             {
                 en.SetDamage((int)(damage * _parameters.baseDamage));
             }
