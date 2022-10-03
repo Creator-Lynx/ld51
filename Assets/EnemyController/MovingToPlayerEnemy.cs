@@ -1,7 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using System.Threading.Tasks.Dataflow;
-//using System.Transactions;
 using UnityEngine;
 
 public class MovingToPlayerEnemy : Enemy
@@ -23,7 +19,11 @@ public class MovingToPlayerEnemy : Enemy
             transform.position += dir * MoveSpeed * Time.deltaTime;
             transform.rotation = Quaternion.LookRotation(dir);
 
-            if(Vector3.Distance(transform.position, Player.position) < 9f)
+            if (Vector3.Distance(transform.position, Player.position) < 9f)
+            {
+                Corrupt();
+            }
+            if (base._manager.IsActivePhase)
             {
                 Corrupt();
             }
