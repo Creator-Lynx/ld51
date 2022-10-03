@@ -84,3 +84,4 @@ crashlytics-build.properties
 
 # Musiс that I think do not to public
 /[Aa]ssets/[Ss]ounds/[Mm]usic/*
+Assets/StreamingAssets/highscore.txt

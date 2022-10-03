@@ -13,6 +13,8 @@ public class WeaponSelectionCase : MonoBehaviour
     private WeaponSelectionDialog _dialog;
     private string _wName;
 
+    private bool interactible = false;
+
     public void Initialize(WeaponSelectionDialog dialog, string wName)
     {
         _gm = FindObjectOfType<GameManager>();
@@ -31,21 +33,33 @@ public class WeaponSelectionCase : MonoBehaviour
         WeaponIcon.sprite = _gm.weapDB.GetWeaponIcon(wName);
 
         string displayName = "";
+        string isActive = _gm.weapDB.IsActiveWeapon(wName) ? " [active]" : " [passive]";
         if(status.isOnPlayer)
         {
-            displayName = $"<b>{wName}</b> (Level {status.level + 1})";
+            displayName = $"<b>{wName}</b> (Level {status.level + 1})" + isActive;
             WeaponDesc.text = _gm.weapDB.GetDescription(wName, status.level + 1);
         }
         else
         {
-            displayName = $"<b>{wName}</b> (Level 1)";
+            displayName = $"<b>{wName}</b> (Level 1)" + isActive;
             WeaponDesc.text = _gm.weapDB.GetDescription(wName, 1);
         }
         WeaponName.text = displayName;
+
+        StartCoroutine(Activate());
+    }
+
+    private IEnumerator Activate()
+    {
+        yield return new WaitForSecondsRealtime(0.8f);
+        interactible = true;
     }
 
     public void OnClick()
     {
-        _dialog.Select(_wName);
+        if (interactible)
+        {
+            _dialog.Select(_wName);
+        }
     }
 }
