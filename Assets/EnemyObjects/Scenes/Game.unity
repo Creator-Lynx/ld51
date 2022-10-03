@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.13758159, g: 0.123905845, b: 0.12124289, a: 1}
+  m_IndirectSpecularColor: {r: 0.13758096, g: 0.1239053, b: 0.121242344, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7189,6 +7189,7 @@ MonoBehaviour:
   DeathScreen: {fileID: 1035567103}
   weapDB: {fileID: 11400000, guid: 0560cf7b7040b394085afc18e056853e, type: 2}
   weaponSelectionDialog: {fileID: 1717024096}
+  Heal: {fileID: 4737630445221612711, guid: a78f618bf3295694a8f159c71f5e72bf, type: 3}
 --- !u!4 &529129781
 Transform:
   m_ObjectHideFlags: 0

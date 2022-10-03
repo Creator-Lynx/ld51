@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public WeaponsDataBase weapDB;
     public WeaponSelectionDialog weaponSelectionDialog;
 
+    public GameObject Heal;
+
     private string higscorePath =>
         Application.streamingAssetsPath + "/highscore.txt";
 
@@ -33,7 +35,7 @@ public class GameManager : MonoBehaviour
             Highcore = int.Parse(File.ReadAllText(higscorePath));
         }
 
-        FindObjectOfType<PlayerController>().OnDeath += OnPlayerDead;
+        FindObjectOfType<PlayerController>().OnDeath += OnPlayerDead;        
     }
 
     public void StartActivePhase()
@@ -66,8 +68,22 @@ public class GameManager : MonoBehaviour
 
         while(true)
         {
-            weaponSelectionDialog.ShowDialog();
+            SpawnHeal();
+            weaponSelectionDialog.ShowDialog();            
             yield return new WaitForSeconds(30f);
+        }
+    }
+
+    private void SpawnHeal()
+    {
+        var pl = FindObjectOfType<PlayerController>();
+        if (pl)
+        {
+            var hor = UnityEngine.Random.Range(-10, 10);
+            var vert = UnityEngine.Random.Range(-10, 10);
+            var vect = new Vector3(hor, 0, vert).normalized * 8f;
+            var go = Instantiate(Heal);
+            go.transform.position = vect;
         }
     }
 }
