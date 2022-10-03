@@ -9,7 +9,7 @@ public class PlayerParameters
     public float playerMovementSpeed = 5f;
     public int additionProjectilesCount = 0;
 
-    public float baseDamageRange = 1f;
+    public float baseDamage = 1f;
     public float baseAttackSpeed = 1f;
     public float baseAttackDuration = 1f;
     public float baseReloadSpeed = 1f;

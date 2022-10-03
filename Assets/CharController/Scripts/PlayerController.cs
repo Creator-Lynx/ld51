@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public Weapon ActiveWeapon = null;
     public List<Weapon> PassiveWeapons;
 
+    public ParticleSystem DmgPart;
+    public ParticleSystem DeathPart;
+
     private GameManager _gm;
 
     private void Start()
@@ -22,8 +25,7 @@ public class PlayerController : MonoBehaviour
         _gm = FindObjectOfType<GameManager>();
         CurHealth = parameters.playerMaxHealth;
         
-        AddWeapon("Test");
-        AddWeapon("Test");
+        AddWeapon("Fireball");
     }
 
     private void Update()
@@ -150,8 +152,10 @@ public class PlayerController : MonoBehaviour
     public void SetDamage(int dmg)
     {
         CurHealth -= dmg;
-        if(CurHealth <= 0)
+        DmgPart.Play();
+        if (CurHealth <= 0)
         {
+            Instantiate(DeathPart, transform.position, Quaternion.identity);
             OnDeath?.Invoke();
             Destroy(gameObject);
         }

@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
     public Action OnCorrupted;
 
     public ParticleSystem CorruptedPart;
+    public ParticleSystem DmgPart;
+    public ParticleSystem DeathPart;
 
     private GameManager _manager;
 
@@ -44,9 +46,11 @@ public class Enemy : MonoBehaviour
     public void SetDamage(int dmg)
     {
         CurHealth -= dmg;
+        DmgPart.Play();
         Corrupt();
         if(CurHealth <= 0)
         {
+            Instantiate(DeathPart, transform.position, Quaternion.identity);
             FindObjectOfType<GameManager>().AddScore(KillScore);
             Destroy(gameObject);
         }

@@ -23,3 +23,17 @@ MonoBehaviour:
     - Level: 2
       Prefab: {fileID: 1273027000308311496, guid: b669d3464719b4146a46af4f4ee04664, type: 3}
       Description: Level 2 of test weapon
+  - Name: Beam
+    IsActive: 1
+    WeaponIcon: {fileID: 21300000, guid: 3fb8f7bc53cf156489e88b94c364449b, type: 3}
+    Prefabs:
+    - Level: 1
+      Prefab: {fileID: 6852747295433058831, guid: 96f8adaea47ddc24094ecae0451ba262, type: 3}
+      Description: Level 1 of Magic beam
+  - Name: Fireball
+    IsActive: 1
+    WeaponIcon: {fileID: 21300000, guid: 065b55c8b27cf104cb1edd6a54d64030, type: 3}
+    Prefabs:
+    - Level: 1
+      Prefab: {fileID: 1842076124194982107, guid: c2e0617715b19364396a454ddb889673, type: 3}
+      Description: Level 1 of fireball

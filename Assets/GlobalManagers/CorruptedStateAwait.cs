@@ -12,8 +12,7 @@ public class CorruptedStateAwait : MonoBehaviour
     }
 
     private void SetCorruptedState()
-    {
-        Debug.Log("Corrupted ground");
+    {        
         GetComponent<MeshRenderer>().material = CorruptedMat;
     }
 }
