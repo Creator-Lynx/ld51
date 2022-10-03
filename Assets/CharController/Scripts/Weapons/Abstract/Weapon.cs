@@ -16,12 +16,12 @@ public abstract class Weapon : MonoBehaviour
 
     public void Initialize(PlayerParameters parameters)
     {
-        _parameters = parameters;        
+        _parameters = parameters;
     }
 
     public void Attack(Vector3 attackDir)
     {
-        if(_curAttack == null)
+        if (_curAttack == null)
         {
             Ready = false;
             _curAttack = StartCoroutine(AttackProcess(attackDir));
@@ -29,7 +29,7 @@ public abstract class Weapon : MonoBehaviour
     }
 
     private IEnumerator AttackProcess(Vector3 attackDir)
-    {        
+    {
         yield return StartCoroutine(OnAttack(attackDir));
         yield return new WaitForSeconds(reloadSpeed * _parameters.baseReloadSpeed);
         _curAttack = null;

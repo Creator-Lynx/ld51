@@ -6,12 +6,12 @@ public class Shield_Lvl1 : Weapon
 {
     private List<Enemy> enemies = new List<Enemy>();
 
-    public override float reloadSpeed => 0.1f;
-    public virtual int damage => 5;
+    public override float reloadSpeed => 0.8f;
+    public int damage = 5;
 
     protected override IEnumerator OnAttack(Vector3 attackDir)
-    {        
-        for(int i = 0; i < enemies.Count; i++)
+    {
+        for (int i = 0; i < enemies.Count; i++)
         {
             var en = enemies[i];
             if (en && en.CurHealth > 0)
@@ -23,7 +23,7 @@ public class Shield_Lvl1 : Weapon
                 enemies.Remove(en);
             }
         }
-        
+
         yield break;
     }
 

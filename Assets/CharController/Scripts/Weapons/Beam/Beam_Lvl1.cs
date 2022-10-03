@@ -8,7 +8,7 @@ public class Beam_Lvl1 : Weapon
     public Collider BeamCollider;
 
     public override float reloadSpeed => 1;
-    public virtual int damage => 20;
+    public int damage = 20;
 
     private List<Enemy> enemies = new List<Enemy>();
 
@@ -32,17 +32,17 @@ public class Beam_Lvl1 : Weapon
     private void Damage()
     {
         Debug.Log(enemies.Count);
-        foreach(var e in enemies)
+        foreach (var e in enemies)
         {
             e.SetDamage((int)(damage * _parameters.baseDamage));
         }
     }
 
     private void OnTriggerEnter(Collider other)
-    {        
+    {
         var en = other.GetComponent<Enemy>();
         if (en)
-        {            
+        {
             en.SetDamage((int)(damage * _parameters.baseDamage));
         }
     }

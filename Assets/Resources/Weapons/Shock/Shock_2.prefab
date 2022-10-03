@@ -173,8 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d510267fcd7bb394da308bf38e33f1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: 
-  WeaponLevel: 0
+  WeaponName: Shock
+  WeaponLevel: 5
+  damage: 8
   electric: {fileID: 6890022199614594394}
   pointer: {fileID: 6890022200087415304}
 --- !u!1 &6890022200087415305

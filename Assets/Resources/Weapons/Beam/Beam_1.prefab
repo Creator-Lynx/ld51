@@ -63,6 +63,7 @@ MonoBehaviour:
   WeaponLevel: 1
   BeamParticle: {fileID: 5251397354388541034}
   BeamCollider: {fileID: 6852747295433058816}
+  damage: 2
 --- !u!1001 &3215801645366933965
 PrefabInstance:
   m_ObjectHideFlags: 0

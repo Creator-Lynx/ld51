@@ -20,6 +20,33 @@ MonoBehaviour:
     - Level: 1
       Prefab: {fileID: 6852747295433058831, guid: 96f8adaea47ddc24094ecae0451ba262, type: 3}
       Description: Level 1 of Magic beam
+    - Level: 2
+      Prefab: {fileID: 6852747295433058831, guid: 357ce9c2e7505c047ba4c8ee49220131, type: 3}
+      Description: Level 2 of Magic beam
+    - Level: 3
+      Prefab: {fileID: 6852747295433058831, guid: a886b2080241f074394422acce557d6b, type: 3}
+      Description: Level 3 of Magic beam
+    - Level: 4
+      Prefab: {fileID: 6852747295433058831, guid: 75740eeb0595ffa4cb20277d944a8e18, type: 3}
+      Description: Level 4 of Magic beam
+    - Level: 5
+      Prefab: {fileID: 6852747295433058831, guid: d2b3e9e42f5da5c428d65e8081c15259, type: 3}
+      Description: Level 5 of Magic beam
+    - Level: 6
+      Prefab: {fileID: 6852747295433058831, guid: 506fbdf34a7d53d449749360be669e87, type: 3}
+      Description: Level 6 of Magic beam
+    - Level: 7
+      Prefab: {fileID: 6852747295433058831, guid: 5b719e3a492234148a92b222ba5cc142, type: 3}
+      Description: Level 7 of Magic beam
+    - Level: 8
+      Prefab: {fileID: 6852747295433058831, guid: e2f78a2ce2c9f364698033b69da0af62, type: 3}
+      Description: Level 8 of Magic beam
+    - Level: 9
+      Prefab: {fileID: 6852747295433058831, guid: 0b1ab2e1c24b7a141bfcf755f8bf2bf7, type: 3}
+      Description: Level 9 of Magic beam
+    - Level: 10
+      Prefab: {fileID: 6852747295433058831, guid: 3f31b01d3b1d18f4b9d302e72553473a, type: 3}
+      Description: Level 10 of Magic beam
   - Name: Fireball
     IsActive: 1
     WeaponIcon: {fileID: 21300000, guid: 065b55c8b27cf104cb1edd6a54d64030, type: 3}
@@ -27,6 +54,27 @@ MonoBehaviour:
     - Level: 1
       Prefab: {fileID: 1842076124194982107, guid: c2e0617715b19364396a454ddb889673, type: 3}
       Description: Level 1 of fireball
+    - Level: 2
+      Prefab: {fileID: 1842076124194982107, guid: be1a5cb7ba0db674b85e5e3350f6903c, type: 3}
+      Description: Level 2 of fireball
+    - Level: 3
+      Prefab: {fileID: 1842076124194982107, guid: fe4c9cbf922d5f44da33e85e536f6faf, type: 3}
+      Description: Level 3 of fireball
+    - Level: 4
+      Prefab: {fileID: 1842076124194982107, guid: 22230e2a493ac4042b9fc6eedfe3ccf3, type: 3}
+      Description: Level 4 of fireball
+    - Level: 5
+      Prefab: {fileID: 1842076124194982107, guid: 812af9a0d62b7414eb29103672d854a1, type: 3}
+      Description: Level 5 of fireball
+    - Level: 6
+      Prefab: {fileID: 1842076124194982107, guid: a00fde2048ad3da4993acfd5495e6b75, type: 3}
+      Description: Level 6 of fireball
+    - Level: 7
+      Prefab: {fileID: 1842076124194982107, guid: dba0923f42c27644092eabfe134d068e, type: 3}
+      Description: Level 7 of fireball
+    - Level: 8
+      Prefab: {fileID: 1842076124194982107, guid: b36646c247b1122459341827c0166ad4, type: 3}
+      Description: Level 8 of fireball
   - Name: Shield
     IsActive: 0
     WeaponIcon: {fileID: 21300000, guid: ed1b8a98dc861494b8140c835de84bce, type: 3}
@@ -34,6 +82,18 @@ MonoBehaviour:
     - Level: 1
       Prefab: {fileID: 5681515607976858268, guid: 3160a03bc68e62f499968cc00f340e3f, type: 3}
       Description: Level 1 of shield
+    - Level: 2
+      Prefab: {fileID: 5681515607976858268, guid: 2a8005ceeda905d429ca8c9eba464864, type: 3}
+      Description: Level 2 of shield
+    - Level: 3
+      Prefab: {fileID: 5681515607976858268, guid: 1ab5af1dbb1414446a9cf3c5708cb6a3, type: 3}
+      Description: Level 3 of shield
+    - Level: 4
+      Prefab: {fileID: 5681515607976858268, guid: 598a97f2275d846499fffa31fe11056b, type: 3}
+      Description: Level  4 of shield
+    - Level: 5
+      Prefab: {fileID: 5681515607976858268, guid: 7bfac41ffd51ed448951fa69180afd5c, type: 3}
+      Description: Level 5 of shield
   - Name: Satellite
     IsActive: 0
     WeaponIcon: {fileID: 21300000, guid: 4b358629e3842824d844fbd4444495f2, type: 3}
@@ -41,6 +101,42 @@ MonoBehaviour:
     - Level: 1
       Prefab: {fileID: 6981297893212838939, guid: 798f0f383aa8ca9438989b957536cd70, type: 3}
       Description: Level 1 of satellite
+    - Level: 2
+      Prefab: {fileID: 6981297893212838939, guid: 6674f54f47349034a92d8af2c7fac3e6, type: 3}
+      Description: Level 2 of satellite
+    - Level: 3
+      Prefab: {fileID: 6981297893212838939, guid: 62d9fda358a30d54f8e70453677f9dd1, type: 3}
+      Description: Level 3 of satellite
+    - Level: 4
+      Prefab: {fileID: 6981297893212838939, guid: 0fce72e1dd5aebc43a46cd97be7bc2b9, type: 3}
+      Description: Level 4 of satellite
+    - Level: 5
+      Prefab: {fileID: 6981297893212838939, guid: d188a3be0e24f4146bf93792a58f4929, type: 3}
+      Description: Level 5 of satellite
+    - Level: 6
+      Prefab: {fileID: 6981297893212838939, guid: a9ef99e8e4163534ca5e8100566fec8f, type: 3}
+      Description: Level 6 of satellite
+    - Level: 7
+      Prefab: {fileID: 6981297893212838939, guid: 7347d7e821bdb5f47b9f7bc546a56315, type: 3}
+      Description: Level 7 of satellite
+    - Level: 8
+      Prefab: {fileID: 6981297893212838939, guid: 4643b5d8e0d10404c9f7669ce1babbb8, type: 3}
+      Description: Level 8 of satellite
+    - Level: 9
+      Prefab: {fileID: 6981297893212838939, guid: 7e7280b87f7a1d84b91f3f45c41a76df, type: 3}
+      Description: Level 9 of satellite
+    - Level: 10
+      Prefab: {fileID: 6981297893212838939, guid: 64fcc572c616009418827f834b31e541, type: 3}
+      Description: Level 10 of satellite
+    - Level: 11
+      Prefab: {fileID: 6981297893212838939, guid: bf2912301a9f6f84badf503f47ccb23f, type: 3}
+      Description: Level 11 of satellite
+    - Level: 12
+      Prefab: {fileID: 6981297893212838939, guid: bffea101e0d9f074f8cead24be79f612, type: 3}
+      Description: Level 12 of satellite
+    - Level: 13
+      Prefab: {fileID: 6981297893212838939, guid: a8bd567c181b58046a58840beba7791b, type: 3}
+      Description: Level 13 of satellite
   - Name: Shock
     IsActive: 0
     WeaponIcon: {fileID: 21300000, guid: 4af90b2fd9a7f2042b4fdb71adf74a2c, type: 3}
@@ -49,5 +145,43 @@ MonoBehaviour:
       Prefab: {fileID: 528335706145833525, guid: 4f3c1cd334b50644d9f8fe938b5f577d, type: 3}
       Description: Level 1 of satellite
     - Level: 2
+      Prefab: {fileID: 528335706145833525, guid: 4e50bdf760f4b974f93d8158f95a37b8, type: 3}
+      Description: 'Level 2 of satellite
+
+'
+    - Level: 3
+      Prefab: {fileID: 528335706145833525, guid: e5f14b0322f141f47ac849e572d66f12, type: 3}
+      Description: Level 3 of satellite
+    - Level: 4
+      Prefab: {fileID: 528335706145833525, guid: 50a32239bc2e33f42b328d97508b82e7, type: 3}
+      Description: Level 4 of satellite
+    - Level: 5
       Prefab: {fileID: 1720955334243959655, guid: 1bc4fae260a51b34fb9e94586a6f499a, type: 3}
-      Description: Level 2 of satellite
+      Description: 'Level 5 of satellite
+
+        MORE POWERFULL!!!'
+    - Level: 6
+      Prefab: {fileID: 1720955334243959655, guid: b820de538dc26cf4783f3a47ef57e8a3, type: 3}
+      Description: 'Level 6 of satellite
+
+'
+    - Level: 7
+      Prefab: {fileID: 1720955334243959655, guid: 5ec1f3c5d6a1e874caca72c92555b330, type: 3}
+      Description: 'Level 7 of satellite
+
+'
+    - Level: 8
+      Prefab: {fileID: 1720955334243959655, guid: 50073116173aef14697dc1c18f4007e6, type: 3}
+      Description: 'Level 8 of satellite
+
+'
+    - Level: 9
+      Prefab: {fileID: 1720955334243959655, guid: ca4a06dd57ed0414aa53a14aa0dbddcf, type: 3}
+      Description: 'Level 9 of satellite
+
+'
+    - Level: 10
+      Prefab: {fileID: 1720955334243959655, guid: a612e82405a690149b0ca9f4f2e62e8a, type: 3}
+      Description: 'Level 10 of satellite
+
+'

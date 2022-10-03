@@ -5,7 +5,7 @@ using UnityEngine;
 public class Satellite_Lvl1 : Weapon
 {
     public Transform Orb;
-    public virtual int damage => 5;
+    public int damage = 5;
 
     private void Update()
     {

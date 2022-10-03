@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: Shock
   WeaponLevel: 1
+  damage: 3
   electric: {fileID: 528335706145833529}
   pointer: {fileID: 528335706610406763}
 --- !u!1 &528335706610406762

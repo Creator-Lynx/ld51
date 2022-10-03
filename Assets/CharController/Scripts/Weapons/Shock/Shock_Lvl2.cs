@@ -5,12 +5,12 @@ using UnityEngine;
 public class Shock_Lvl2 : Shock_Lvl1
 {
     public override float reloadSpeed => 1.3f;
-    public override int damage => 3;
+    //public  int damage = 3;
 
     protected override IEnumerator OnAttack(Vector3 attackDir)
     {
-        if(enem/* && enem.CurHealth > 0*/)
-        {            
+        if (enem/* && enem.CurHealth > 0*/)
+        {
             lockOnTarget = true;
             yield return new WaitForSeconds(0.3f);
             if (enem.CurHealth > 0)
@@ -21,7 +21,7 @@ public class Shock_Lvl2 : Shock_Lvl1
         }
 
         if (enem /*&& enem.CurHealth > 0*/)
-        {            
+        {
             lockOnTarget = true;
             yield return new WaitForSeconds(0.3f);
             if (enem.CurHealth > 0)
@@ -32,7 +32,7 @@ public class Shock_Lvl2 : Shock_Lvl1
         }
 
         if (enem/* && enem.CurHealth > 0*/)
-        {            
+        {
             lockOnTarget = true;
             yield return new WaitForSeconds(0.3f);
             if (enem.CurHealth > 0)

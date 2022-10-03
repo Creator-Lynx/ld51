@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class Shock_Lvl1 : Weapon
 {
-    public override float reloadSpeed => 1.5f;    
-    public virtual int damage => 5;
+    public override float reloadSpeed => 1.5f;
+    public int damage = 5;
 
     public Electric electric;
     public Transform pointer;
     protected Enemy enem;
-    protected bool lockOnTarget = false;    
+    protected bool lockOnTarget = false;
 
     protected override IEnumerator OnAttack(Vector3 attackDir)
     {
-        if(enem)
-        {            
+        if (enem)
+        {
             lockOnTarget = true;
             yield return new WaitForSeconds(0.3f);
             enem.SetDamage((int)(damage * _parameters.baseDamage));
-            lockOnTarget = false;            
+            lockOnTarget = false;
         }
-        
+
         yield break;
     }
 
     private void Update()
     {
-        if(lockOnTarget && enem)
+        if (lockOnTarget && enem)
         {
             pointer.transform.position = enem.transform.position;
         }

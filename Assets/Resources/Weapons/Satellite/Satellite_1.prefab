@@ -59,9 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d69aa3b8ff88494582e2f86d04908eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: 
-  WeaponLevel: 0
+  WeaponName: Satellite
+  WeaponLevel: 1
   Orb: {fileID: 6981297895076349755}
+  damage: 5
 --- !u!1 &6981297895076349754
 GameObject:
   m_ObjectHideFlags: 0
