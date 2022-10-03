@@ -69,7 +69,7 @@ public class OptionsMenu : MonoBehaviour
         PlayerPrefs.SetInt("PostProcessing", postProcessIsOn ? 1 : 0);
     }
     //===========================================================================================================
-    public static float Sensitivity { get; private set; }
+    public static float Sensitivity { get; private set; } = 1f;
     public static Action OnSensitiveChange;
     [SerializeField]
     Slider sensitiveSlider;

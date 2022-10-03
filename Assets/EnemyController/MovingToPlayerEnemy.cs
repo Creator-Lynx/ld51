@@ -25,7 +25,7 @@ public class MovingToPlayerEnemy : Enemy
             }
             if (base._manager.IsActivePhase)
             {
-                Corrupt();
+                //Corrupt();
             }
         }
     }

@@ -2291,7 +2291,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2b62a51a52a2b884e9b2ecb53a862187, type: 2}
+  - {fileID: 2100000, guid: 1cdd4afe07dfc4545a1c3547790ad221, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10877,10 +10877,6 @@ PrefabInstance:
       propertyPath: gameMusic
       value: 
       objectReference: {fileID: 663605837}
-    - target: {fileID: 773731389973860857, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 773731390244942683, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10888,10 +10884,6 @@ PrefabInstance:
     - target: {fileID: 773731390244942683, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 773731390459558773, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 966.5801
       objectReference: {fileID: 0}
     - target: {fileID: 773731391396109273, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
       propertyPath: m_Name
@@ -10949,10 +10941,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 665832427}
-    - target: {fileID: 8679002661130006153, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
 --- !u!1001 &957242214

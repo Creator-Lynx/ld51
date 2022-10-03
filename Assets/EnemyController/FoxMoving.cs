@@ -21,6 +21,7 @@ public class FoxMoving : MovingToPlayerEnemy
         base.OnAttack();
         MoveSpeed = startMoveSpeed;
         StartCoroutine(WaitToSprint());
+        GetComponentInChildren<Animator>().SetBool("IsEvil", false);
     }
 
     public override void SetDamage(int dmg)
@@ -33,6 +34,7 @@ public class FoxMoving : MovingToPlayerEnemy
     {
         yield return new WaitForSeconds(timeToSprint);
         MoveSpeed = sprintMoveSpeed;
+        Corrupt();
     }
 
 }

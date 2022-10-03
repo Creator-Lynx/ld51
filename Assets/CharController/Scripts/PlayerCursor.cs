@@ -14,6 +14,7 @@ public class PlayerCursor : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        _speed = OptionsMenu.Sensitivity;
     }
 
     private void Update()
