@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Weapons
   m_EditorClassIdentifier: 
   records:
-  - Name: Test
-    IsActive: 1
-    WeaponIcon: {fileID: 21300000, guid: 902af42b7d4b8fe48a2633533944b6b3, type: 3}
-    Prefabs:
-    - Level: 1
-      Prefab: {fileID: 8962342045644957195, guid: 8241a6110d02e64428fae9427da62485, type: 3}
-      Description: Level 1 of test weapon
-    - Level: 2
-      Prefab: {fileID: 1273027000308311496, guid: b669d3464719b4146a46af4f4ee04664, type: 3}
-      Description: Level 2 of test weapon
   - Name: Beam
     IsActive: 1
     WeaponIcon: {fileID: 21300000, guid: 3fb8f7bc53cf156489e88b94c364449b, type: 3}
