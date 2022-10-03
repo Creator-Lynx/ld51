@@ -16,9 +16,17 @@ public class FoxMoving : MovingToPlayerEnemy
         base.OnUpdate();
     }
 
+    protected override void OnAttack()
+    {
+        base.OnAttack();
+        MoveSpeed = startMoveSpeed;
+        StartCoroutine(WaitToSprint());
+    }
+
     IEnumerator WaitToSprint()
     {
         yield return new WaitForSeconds(timeToSprint);
         MoveSpeed = sprintMoveSpeed;
     }
+
 }

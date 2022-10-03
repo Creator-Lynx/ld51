@@ -68,7 +68,7 @@ MonoBehaviour:
   MaxHealth: 5
   CurHealth: 0
   Damage: 3
-  KillScore: 10
+  KillScore: 1
   CorruptedPart: {fileID: 3812177192849165497}
   DmgPart: {fileID: 1257532705641823831}
   DeathPart: {fileID: 4092117592379207354, guid: b6313a7e613de9c4babe583b7373efba, type: 3}

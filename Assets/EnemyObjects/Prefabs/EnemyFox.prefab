@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741210902955570352}
   - component: {fileID: 741210902955570353}
-  - component: {fileID: 741210902955570348}
+  - component: {fileID: 3878724606436032496}
   - component: {fileID: 741210902955570349}
   - component: {fileID: 741210902955570350}
   m_Layer: 0
@@ -53,7 +53,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &741210902955570348
+--- !u!114 &3878724606436032496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,17 +62,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 741210902955570347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb832b0b50c5bf4c9f06e22437b66d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0154dc7444697fc4da29ace1288691ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 5
+  MaxHealth: 10
   CurHealth: 0
-  Damage: 3
-  KillScore: 10
+  Damage: 5
+  KillScore: 3
   CorruptedPart: {fileID: 3812177192849165497}
   DmgPart: {fileID: 1257532705641823831}
   DeathPart: {fileID: 4092117592379207354, guid: b6313a7e613de9c4babe583b7373efba, type: 3}
-  MoveSpeed: 1.73
+  MoveSpeed: 5
+  startMoveSpeed: 0.4
+  sprintMoveSpeed: 7
+  timeToSprint: 5
 --- !u!65 &741210902955570349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.805
       objectReference: {fileID: 0}
     - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
       propertyPath: m_LocalPosition.y
@@ -130,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
       propertyPath: m_LocalRotation.w
@@ -193,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: 1.751
       objectReference: {fileID: 0}
     - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -251,6 +254,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -296,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ef3c51b356f1ce54cb70475adc9a1b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}
       propertyPath: m_Name
-      value: fox
+      value: rabbit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}

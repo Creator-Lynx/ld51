@@ -58,8 +58,12 @@ public class Enemy : MonoBehaviour
         {
             collision.collider.GetComponent<PlayerController>().SetDamage(Damage);
             _timer = attackInterval;
+            OnAttack();
+
         }
     }
+
+    protected virtual void OnAttack() { }
 
     private void OnCollisionStay(Collision collision)
     {

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/EnemyTest/Scenes/TestGameplay with enemies.unity
+    path: Assets/EnemyObjects/Scenes/TestGameplay with enemies.unity
     guid: 47f904d1fe5cbac4dad58f47aaa8fbab
   m_configObjects: {}
