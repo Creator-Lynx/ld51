@@ -22,6 +22,13 @@ public class TeleportTrigger : MonoBehaviour
                 var offset = e.transform.position - playerOldPos;
                 e.transform.position = other.transform.position + offset;
             }
+
+            var prj = GameObject.FindGameObjectsWithTag("Projectile");
+            foreach (var p in prj)
+            {
+                var offset = p.transform.position - playerOldPos;
+                p.transform.position = other.transform.position + offset;
+            }
         }
     }
 }

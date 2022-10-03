@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974ef5c066f8e514b9c192d6f5ad2bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: 
+  WeaponName: Fireball
   WeaponLevel: 1
   projectile: {fileID: -2684684738381492001, guid: bafce72147d6eeb40b5f91b4c32f0105, type: 3}

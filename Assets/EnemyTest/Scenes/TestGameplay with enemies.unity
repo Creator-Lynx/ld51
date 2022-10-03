@@ -202,7 +202,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1211649402}
   m_FillRect: {fileID: 2110555635}
   m_HandleRect: {fileID: 1211649401}
@@ -1871,7 +1871,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawns:
   - {fileID: 11400000, guid: d7cfa47a1079ac74899251b27e6aafca, type: 2}
-  - {fileID: 11400000, guid: 5b1bc32b9cb27f9449483c95233e6d1d, type: 2}
   FirstEnemy: {fileID: 741210902955570348, guid: 538627206f975e649b23377e237b27b8, type: 3}
 --- !u!1 &560171494
 GameObject:
