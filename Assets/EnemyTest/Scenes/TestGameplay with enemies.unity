@@ -3851,6 +3851,7 @@ MonoBehaviour:
   WeaponsToSelect:
   - Beam
   - Fireball
+  - Shield
   CasePref: {fileID: 4881942963678020965, guid: 686f52f025800fd4987b7fd00c8df8da, type: 3}
   CaseOrigin: {fileID: 377955141}
 --- !u!1 &1795849123
