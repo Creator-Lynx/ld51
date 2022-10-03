@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Menu/MainMenu/main_menu.unity
+    guid: e9e6c6f881eb90f41ba527904ca532ec
+  - enabled: 0
     path: Assets/EnemyObjects/Scenes/TestGameplay with enemies.unity
     guid: 47f904d1fe5cbac4dad58f47aaa8fbab
+  - enabled: 1
+    path: Assets/EnemyObjects/Scenes/Game.unity
+    guid: bb67c282eff3eca4093e1166efec1a0c
   m_configObjects: {}

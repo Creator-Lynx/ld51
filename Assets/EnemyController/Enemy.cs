@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     protected GameManager _manager;
     protected bool isTakingDamage = true;
     protected bool isMakingDamage = true;
+    protected bool isDead = false;
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         _timer -= Time.deltaTime;
+        if (CurHealth <= 0) isDead = true;
         OnUpdate();
     }
 
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void SetDamage(int dmg)
     {
+        if (isDead) return;
         CurHealth -= dmg;
         DmgPart.Play();
         //Corrupt();
@@ -50,7 +53,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(DeathPart, transform.position, Quaternion.identity);
             FindObjectOfType<GameManager>().AddScore(KillScore);
-            Destroy(gameObject);            
+            Destroy(gameObject);
         }
     }
 
