@@ -36,4 +36,9 @@ public class WeaponsDataBase : ScriptableObject
     {
         return records.First(x => x.Name == wName).GetDescription(wLevel);
     }
+
+    public int GetMaxLevel(string wName)
+    {        
+        return records.First(x => x.Name == wName).Prefabs.Count();
+    }
 }

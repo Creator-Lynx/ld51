@@ -9,7 +9,7 @@ public class WeaponSelectionDialog : MonoBehaviour
     public WeaponSelectionCase CasePref;
     public Transform CaseOrigin;
 
-    private List<GameObject> created;
+    private List<GameObject> created = new List<GameObject>();
 
     public void ShowDialog()
     {

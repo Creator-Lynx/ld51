@@ -13,18 +13,20 @@ public class WeaponSelectionCase : MonoBehaviour
     private WeaponSelectionDialog _dialog;
     private string _wName;
 
-    private void Start()
-    {
-        _gm = FindObjectOfType<GameManager>();
-    }
-
     public void Initialize(WeaponSelectionDialog dialog, string wName)
     {
+        _gm = FindObjectOfType<GameManager>();
         _dialog = dialog;
         _wName = wName;
 
         var player = FindObjectOfType<PlayerController>();
         var status = player.GetWeaponStatus(wName);
+
+        if (status.level == _gm.weapDB.GetMaxLevel(wName))
+        {
+            gameObject.SetActive(false);
+            return;
+        }
 
         WeaponIcon.sprite = _gm.weapDB.GetWeaponIcon(wName);
 
@@ -40,8 +42,6 @@ public class WeaponSelectionCase : MonoBehaviour
             WeaponDesc.text = _gm.weapDB.GetDescription(wName, 1);
         }
         WeaponName.text = displayName;
-
-        
     }
 
     public void OnClick()

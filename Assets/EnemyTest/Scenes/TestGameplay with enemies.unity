@@ -1871,6 +1871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawns:
   - {fileID: 11400000, guid: d7cfa47a1079ac74899251b27e6aafca, type: 2}
+  - {fileID: 11400000, guid: 5b1bc32b9cb27f9449483c95233e6d1d, type: 2}
   FirstEnemy: {fileID: 741210902955570348, guid: 538627206f975e649b23377e237b27b8, type: 3}
 --- !u!1 &560171494
 GameObject:
@@ -3847,7 +3848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a85932cd85ac74489a9346e7c1a7025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponsToSelect: []
+  WeaponsToSelect:
+  - Beam
+  - Fireball
   CasePref: {fileID: 4881942963678020965, guid: 686f52f025800fd4987b7fd00c8df8da, type: 3}
   CaseOrigin: {fileID: 377955141}
 --- !u!1 &1795849123

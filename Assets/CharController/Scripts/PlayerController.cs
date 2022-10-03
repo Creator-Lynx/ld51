@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         _gm = FindObjectOfType<GameManager>();
         CurHealth = parameters.playerMaxHealth;
         
-        AddWeapon("Fireball");
+        //AddWeapon("Fireball");
     }
 
     private void Update()

@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -41,6 +40,8 @@ public class GameManager : MonoBehaviour
     {
         IsActivePhase = true;
         OnActivePhase?.Invoke();
+
+        StartCoroutine(WeaponDelivery());        
     }
 
     public void AddScore(int score)
@@ -57,5 +58,16 @@ public class GameManager : MonoBehaviour
         }
 
         DeathScreen.Init(this);
+    }
+
+    private IEnumerator WeaponDelivery()
+    {
+        yield return new WaitForSeconds(3f);
+
+        while(true)
+        {
+            weaponSelectionDialog.ShowDialog();
+            yield return new WaitForSeconds(30f);
+        }
     }
 }
