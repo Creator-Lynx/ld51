@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public float timer = 30;
+    public bool isTimer = false;
+
     public int Highcore { get; private set; }
     public int Score { get; private set; } = 0;
     public int KillCount { get; private set; } = 0;
@@ -38,6 +41,14 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<PlayerController>().OnDeath += OnPlayerDead;        
     }
 
+    private void Update()
+    {
+        if (isTimer)
+        {
+            timer -= Time.deltaTime;
+        }
+    }
+
     public void StartActivePhase()
     {
         IsActivePhase = true;
@@ -65,12 +76,13 @@ public class GameManager : MonoBehaviour
     private IEnumerator WeaponDelivery()
     {
         yield return new WaitForSeconds(3f);
-
-        while(true)
+        isTimer = true;
+        while (true)
         {
             SpawnHeal();
             weaponSelectionDialog.ShowDialog();            
             yield return new WaitForSeconds(30f);
+            timer = 30;
         }
     }
 
