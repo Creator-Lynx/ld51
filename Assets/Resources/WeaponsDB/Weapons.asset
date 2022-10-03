@@ -44,3 +44,10 @@ MonoBehaviour:
     - Level: 1
       Prefab: {fileID: 5681515607976858268, guid: 3160a03bc68e62f499968cc00f340e3f, type: 3}
       Description: Level 1 of shield
+  - Name: Satellite
+    IsActive: 0
+    WeaponIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    Prefabs:
+    - Level: 1
+      Prefab: {fileID: 6981297893212838939, guid: 798f0f383aa8ca9438989b957536cd70, type: 3}
+      Description: Level 1 of satellite
