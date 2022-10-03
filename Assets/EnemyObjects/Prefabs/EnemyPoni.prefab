@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 741210902955570349}
   - component: {fileID: 741210902955570350}
   m_Layer: 0
-  m_Name: EnemyFox
+  m_Name: EnemyPoni
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,16 +65,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154dc7444697fc4da29ace1288691ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 15
+  MaxHealth: 100
   CurHealth: 0
-  Damage: 5
-  KillScore: 7
+  Damage: 10
+  KillScore: 100
   CorruptedPart: {fileID: 3812177192849165497}
   DmgPart: {fileID: 1257532705641823831}
   DeathPart: {fileID: 4092117592379207354, guid: b6313a7e613de9c4babe583b7373efba, type: 3}
   MoveSpeed: 5
-  startMoveSpeed: 0.4
-  sprintMoveSpeed: 7
+  startMoveSpeed: 1.5
+  sprintMoveSpeed: 8
   timeToSprint: 10
 --- !u!65 &741210902955570349
 BoxCollider:
@@ -87,8 +87,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3, z: 4.02}
-  m_Center: {x: 0, y: 1.5, z: 0}
+  m_Size: {x: 1.79, y: 3.88, z: 4.29}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!95 &741210902955570350
 Animator:
   serializedVersion: 3
@@ -124,12 +124,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7258
+      objectReference: {fileID: 0}
+    - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7258
+      objectReference: {fileID: 0}
+    - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7258
+      objectReference: {fileID: 0}
+    - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 465961080492802905, guid: 7dacbb978a580044080e204a5bdfc302, type: 3}
       propertyPath: m_LocalPosition.z
@@ -191,16 +203,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6658481
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6658481
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6658481
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.751
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4786937635647008651, guid: 0e4af10ba36c1cf42bf4b499ebabd75d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -309,6 +333,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ef3c51b356f1ce54cb70475adc9a1b1d, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1358617403773289510, guid: ba90f9ea8e811694ab36504b44092122, type: 3}
     - target: {fileID: 919132149155446097, guid: 0976088750b906b4c87fd8f6a5b5d8d3, type: 3}
       propertyPath: m_Name
       value: rabbit

@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 4
   CurHealth: 0
-  Damage: 3
+  Damage: 2
   KillScore: 1
   CorruptedPart: {fileID: 3812177192849165497}
   DmgPart: {fileID: 1257532705641823831}
