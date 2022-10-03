@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int MaxHealth = 100;    
+    public int MaxHealth = 100;
     public int CurHealth;
     public int Damage = 3;
     public int KillScore = 10;
 
     public virtual float attackInterval => 0.5f;
     private float _timer = 0;
-    
+
     public bool IsCorrupted { get; private set; } = false;
     public Action OnCorrupted;
 
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     public ParticleSystem DmgPart;
     public ParticleSystem DeathPart;
 
-    private GameManager _manager;
+    protected GameManager _manager;
 
     private void Start()
     {
@@ -33,10 +33,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (_manager.IsActivePhase)
-        {
-            Corrupt();
-        }
         _timer -= Time.deltaTime;
         OnUpdate();
     }
@@ -48,7 +44,7 @@ public class Enemy : MonoBehaviour
         CurHealth -= dmg;
         DmgPart.Play();
         Corrupt();
-        if(CurHealth <= 0)
+        if (CurHealth <= 0)
         {
             Instantiate(DeathPart, transform.position, Quaternion.identity);
             FindObjectOfType<GameManager>().AddScore(KillScore);
@@ -58,7 +54,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Player" && _timer <= 0)
+        if (collision.collider.tag == "Player" && _timer <= 0)
         {
             collision.collider.GetComponent<PlayerController>().SetDamage(Damage);
             _timer = attackInterval;
@@ -79,9 +75,9 @@ public class Enemy : MonoBehaviour
         if (!IsCorrupted)
         {
             CorruptedPart.Play();
-            IsCorrupted = true;            
-            GetComponentInChildren<Animator>().SetBool("IsEvil", true);            
-            OnCorrupted?.Invoke();            
+            IsCorrupted = true;
+            GetComponentInChildren<Animator>().SetBool("IsEvil", true);
+            OnCorrupted?.Invoke();
         }
     }
 }
