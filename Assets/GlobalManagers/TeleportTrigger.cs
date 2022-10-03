@@ -13,11 +13,17 @@ public class TeleportTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             var playerOldPos = other.transform.position;
-            other.transform.position 
+            other.transform.position
                 = new Vector3(other.transform.position.x * hor, other.transform.position.y, other.transform.position.z * vert);
 
+            var xOffset = other.transform.position.x < 0 ? 0.1f : -0.1f;
+            var zOffset = other.transform.position.z < 0 ? 0.1f : -0.1f;
+            var tpoffset = new Vector3(xOffset, 0, zOffset);
+
+            other.transform.position += tpoffset;
+
             var enem = FindObjectsOfType<Enemy>();
-            foreach(var e in enem)
+            foreach (var e in enem)
             {
                 var offset = e.transform.position - playerOldPos;
                 e.transform.position = other.transform.position + offset;
@@ -28,6 +34,13 @@ public class TeleportTrigger : MonoBehaviour
             {
                 var offset = p.transform.position - playerOldPos;
                 p.transform.position = other.transform.position + offset;
+            }
+
+            var meat = GameObject.FindGameObjectsWithTag("Meat");
+            foreach (var m in meat)
+            {
+                var offset = m.transform.position - playerOldPos;
+                m.transform.position = other.transform.position + offset;
             }
         }
     }
