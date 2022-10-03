@@ -39,21 +39,21 @@ MonoBehaviour:
       Description: Level 1 of fireball
   - Name: Shield
     IsActive: 0
-    WeaponIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    WeaponIcon: {fileID: 21300000, guid: ed1b8a98dc861494b8140c835de84bce, type: 3}
     Prefabs:
     - Level: 1
       Prefab: {fileID: 5681515607976858268, guid: 3160a03bc68e62f499968cc00f340e3f, type: 3}
       Description: Level 1 of shield
   - Name: Satellite
     IsActive: 0
-    WeaponIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    WeaponIcon: {fileID: 21300000, guid: 4b358629e3842824d844fbd4444495f2, type: 3}
     Prefabs:
     - Level: 1
       Prefab: {fileID: 6981297893212838939, guid: 798f0f383aa8ca9438989b957536cd70, type: 3}
       Description: Level 1 of satellite
   - Name: Shock
     IsActive: 0
-    WeaponIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    WeaponIcon: {fileID: 21300000, guid: 4af90b2fd9a7f2042b4fdb71adf74a2c, type: 3}
     Prefabs:
     - Level: 1
       Prefab: {fileID: 528335706145833525, guid: 4f3c1cd334b50644d9f8fe938b5f577d, type: 3}

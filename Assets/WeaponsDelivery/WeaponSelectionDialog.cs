@@ -13,6 +13,12 @@ public class WeaponSelectionDialog : MonoBehaviour
 
     public void ShowDialog()
     {
+        var player = FindObjectOfType<PlayerController>();
+        if(!player)
+        {
+            return;
+        }
+
         gameObject.SetActive(true);
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
@@ -34,7 +40,10 @@ public class WeaponSelectionDialog : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
 
-        FindObjectOfType<PlayerController>().AddWeapon(wName);
+        if (!string.IsNullOrEmpty(wName))
+        {
+            FindObjectOfType<PlayerController>().AddWeapon(wName);
+        }
 
         foreach(var cr in created)
         {

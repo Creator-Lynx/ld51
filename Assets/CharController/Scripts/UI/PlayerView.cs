@@ -17,6 +17,21 @@ public class PlayerView : MonoBehaviour
     public Image ActiveWeaponIcon;
     public Text ActiveWeaponLevel;
 
+    [Header("Passive Weapon 1")]
+    public GameObject PassiveWeapon1Panel;    
+    public Image PassiveWeapon1Icon;
+    public Text PassiveWeapon1Level;
+
+    [Header("Passive Weapon 2")]
+    public GameObject PassiveWeapon2Panel;
+    public Image PassiveWeapon2Icon;
+    public Text PassiveWeapon2Level;
+
+    [Header("Passive Weapon 3")]
+    public GameObject PassiveWeapon3Panel;
+    public Image PassiveWeapon3Icon;
+    public Text PassiveWeapon3Level;
+
     [Header("Health")]
     public Slider HealthSlider;
     public Text HealthText;
@@ -46,6 +61,40 @@ public class PlayerView : MonoBehaviour
             else
             {
                 ActiveWeaponPanel.SetActive(false);
+            }
+
+            var passWeapCount = player.PassiveWeapons.Count;
+            if (passWeapCount > 0)
+            {
+                PassiveWeapon1Panel.SetActive(true);
+                PassiveWeapon1Icon.sprite = weaponDB.GetWeaponIcon(player.PassiveWeapons[0].WeaponName);
+                PassiveWeapon1Level.text = player.PassiveWeapons[0].WeaponLevel.ToString();
+            }
+            else
+            {
+                PassiveWeapon1Panel.SetActive(false);
+            }
+
+            if (passWeapCount > 1)
+            {
+                PassiveWeapon2Panel.SetActive(true);
+                PassiveWeapon2Icon.sprite = weaponDB.GetWeaponIcon(player.PassiveWeapons[1].WeaponName);
+                PassiveWeapon2Level.text = player.PassiveWeapons[1].WeaponLevel.ToString();
+            }
+            else
+            {
+                PassiveWeapon2Panel.SetActive(false);
+            }
+
+            if (passWeapCount > 2)
+            {
+                PassiveWeapon3Panel.SetActive(true);
+                PassiveWeapon3Icon.sprite = weaponDB.GetWeaponIcon(player.PassiveWeapons[2].WeaponName);
+                PassiveWeapon3Level.text = player.PassiveWeapons[2].WeaponLevel.ToString();
+            }
+            else
+            {
+                PassiveWeapon3Panel.SetActive(false);
             }
         }
         else
