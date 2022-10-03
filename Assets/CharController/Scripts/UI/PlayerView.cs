@@ -48,7 +48,9 @@ public class PlayerView : MonoBehaviour
         if(_gm.isTimer)
         {
             Timer.gameObject.SetActive(true);
-            Timer.text = ((int)_gm.timer).ToString();
+            var t = ((int)_gm.timer);
+            if(t == 11) { t = 10; }
+            Timer.text = t.ToString();
         }
         else
         {

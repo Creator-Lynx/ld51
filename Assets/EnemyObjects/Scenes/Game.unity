@@ -7191,7 +7191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd527bef8173e5448fd5d67f37be085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 30
+  timer: 11
   isTimer: 0
   DeathScreen: {fileID: 1035567103}
   weapDB: {fileID: 11400000, guid: 0560cf7b7040b394085afc18e056853e, type: 2}
@@ -10480,7 +10480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 10
 --- !u!222 &894037927
 CanvasRenderer:
   m_ObjectHideFlags: 0

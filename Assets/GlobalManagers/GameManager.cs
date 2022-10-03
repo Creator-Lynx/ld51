@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public float timer = 30;
+    public float timer = 10;
     public bool isTimer = false;
 
     public int Highcore { get; private set; }
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         if (isTimer)
         {
-            timer -= Time.deltaTime;
+            timer -= Time.deltaTime / 3;
         }
     }
 
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
             SpawnHeal();
             weaponSelectionDialog.ShowDialog();            
             yield return new WaitForSeconds(30f);
-            timer = 30;
+            timer = 11;
         }
     }
 
