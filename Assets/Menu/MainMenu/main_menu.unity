@@ -599,5 +599,14 @@ PrefabInstance:
       propertyPath: _eSys
       value: 
       objectReference: {fileID: 421932843}
+    - target: {fileID: 2802790488577045476, guid: a3e4f79603abd7c4b973632cd4d41f89, type: 3}
+      propertyPath: text
+      value: "This place is infected and spoiled. \nYou didn't just get here, sinner.
+        You shouldn't have hurt animals (it was a bad move to use cats as a silencer)\nThe
+        Gods of Random, who command the rules of the game, have changed this world.\nIt's
+        your circle of hell. \nTime goes 3 times slower so that the torment lasts
+        longer (this is definitely not done to bypass jam restrictions). \nIt's not
+        what it seems. \nTry to survive by changing \nevery 10 seconds."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3e4f79603abd7c4b973632cd4d41f89, type: 3}
