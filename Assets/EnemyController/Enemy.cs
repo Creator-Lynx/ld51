@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(DeathPart, transform.position, Quaternion.identity);
             FindObjectOfType<GameManager>().AddScore(KillScore);
-            Destroy(gameObject);
+            Destroy(gameObject);            
         }
     }
 
