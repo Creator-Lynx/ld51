@@ -29,4 +29,9 @@ public class MovingToPlayerEnemy : Enemy
             }
         }
     }
+    public override void SetDamage(int dmg)
+    {
+        base.SetDamage(dmg);
+        Corrupt();
+    }
 }

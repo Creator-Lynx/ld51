@@ -23,6 +23,12 @@ public class FoxMoving : MovingToPlayerEnemy
         StartCoroutine(WaitToSprint());
     }
 
+    public override void SetDamage(int dmg)
+    {
+        base.SetDamage(dmg);
+        Corrupt();
+    }
+
     IEnumerator WaitToSprint()
     {
         yield return new WaitForSeconds(timeToSprint);

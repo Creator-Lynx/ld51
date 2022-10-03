@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
     public ParticleSystem DeathPart;
 
     protected GameManager _manager;
+    protected bool isTakingDamage = true;
+    protected bool isMakingDamage = true;
 
     private void Start()
     {
@@ -39,11 +41,11 @@ public class Enemy : MonoBehaviour
 
     protected virtual void OnUpdate() { }
 
-    public void SetDamage(int dmg)
+    public virtual void SetDamage(int dmg)
     {
         CurHealth -= dmg;
         DmgPart.Play();
-        Corrupt();
+        //Corrupt();
         if (CurHealth <= 0)
         {
             Instantiate(DeathPart, transform.position, Quaternion.identity);
@@ -54,24 +56,26 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Player" && _timer <= 0)
-        {
-            collision.collider.GetComponent<PlayerController>().SetDamage(Damage);
-            _timer = attackInterval;
-            OnAttack();
+        if (isMakingDamage)
+            if (collision.collider.tag == "Player" && _timer <= 0)
+            {
+                collision.collider.GetComponent<PlayerController>().SetDamage(Damage);
+                _timer = attackInterval;
+                OnAttack();
 
-        }
+            }
     }
 
     protected virtual void OnAttack() { }
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.collider.tag == "Player" && _timer <= 0)
-        {
-            collision.collider.GetComponent<PlayerController>().SetDamage(Damage);
-            _timer = attackInterval;
-        }
+        if (isMakingDamage)
+            if (collision.collider.tag == "Player" && _timer <= 0)
+            {
+                collision.collider.GetComponent<PlayerController>().SetDamage(Damage);
+                _timer = attackInterval;
+            }
     }
 
     public void Corrupt()
