@@ -11,6 +11,8 @@ public class PlayerView : MonoBehaviour
 
     public Text ScoreText;
 
+    public Text Timer;
+
     [Header("Active Weapon")]    
     public GameObject ActiveWeaponPanel;
     public GameObject ActiveWeaponReady;
@@ -43,6 +45,16 @@ public class PlayerView : MonoBehaviour
 
     private void Update()
     {
+        if(_gm.isTimer)
+        {
+            Timer.gameObject.SetActive(true);
+            Timer.text = ((int)_gm.timer).ToString();
+        }
+        else
+        {
+            Timer.gameObject.SetActive(false);
+        }
+
         ScoreText.text = $"Score: {_gm.Score} Kills: {_gm.KillCount}";
         if (player)
         {

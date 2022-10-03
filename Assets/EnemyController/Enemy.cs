@@ -36,8 +36,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        _timer -= Time.deltaTime;
-        if (CurHealth <= 0) isDead = true;
+        _timer -= Time.deltaTime;        
         OnUpdate();
     }
 
@@ -47,6 +46,7 @@ public class Enemy : MonoBehaviour
     {
         if (isDead) return;
         CurHealth -= dmg;
+        if (CurHealth <= 0) isDead = true;
         DmgPart.Play();
         //Corrupt();
         if (CurHealth <= 0)

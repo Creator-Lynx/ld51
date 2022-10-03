@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.13758159, g: 0.123905845, b: 0.12124289, a: 1}
+  m_IndirectSpecularColor: {r: 0.13758096, g: 0.1239053, b: 0.121242344, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2083,6 +2083,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3e800014b97d8246845f4070f1d79ff, type: 3}
   m_PrefabInstance: {fileID: 1972751937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &110942099 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 773731391647051996, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
+  m_PrefabInstance: {fileID: 954200873}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &111290081
 PrefabInstance:
@@ -7186,9 +7191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd527bef8173e5448fd5d67f37be085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 30
   DeathScreen: {fileID: 1035567103}
   weapDB: {fileID: 11400000, guid: 0560cf7b7040b394085afc18e056853e, type: 2}
   weaponSelectionDialog: {fileID: 1717024096}
+  Heal: {fileID: 4737630445221612711, guid: a78f618bf3295694a8f159c71f5e72bf, type: 3}
 --- !u!4 &529129781
 Transform:
   m_ObjectHideFlags: 0
@@ -10385,6 +10392,85 @@ CapsuleCollider:
   m_Height: 4.41
   m_Direction: 1
   m_Center: {x: 0, y: 1.36, z: 0}
+--- !u!1 &894037924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894037925}
+  - component: {fileID: 894037927}
+  - component: {fileID: 894037926}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &894037925
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894037924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 110942099}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -32.299988}
+  m_SizeDelta: {x: 114.55, y: 64.599976}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &894037926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894037924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c8e016ab2ca43194993ef74beb7f4de8, type: 3}
+    m_FontSize: 55
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 55
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 30
+--- !u!222 &894037927
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894037924}
+  m_CullTransparentMesh: 1
 --- !u!1001 &897991689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10937,6 +11023,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 665832425}
+    - target: {fileID: 773731391647051997, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 894037926}
     - target: {fileID: 773731391647051997, guid: 0ed0f29860f07ab4bb586118eb0e9433, type: 3}
       propertyPath: player
       value: 
