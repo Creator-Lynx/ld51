@@ -51,3 +51,13 @@ MonoBehaviour:
     - Level: 1
       Prefab: {fileID: 6981297893212838939, guid: 798f0f383aa8ca9438989b957536cd70, type: 3}
       Description: Level 1 of satellite
+  - Name: Shock
+    IsActive: 0
+    WeaponIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    Prefabs:
+    - Level: 1
+      Prefab: {fileID: 528335706145833525, guid: 4f3c1cd334b50644d9f8fe938b5f577d, type: 3}
+      Description: Level 1 of satellite
+    - Level: 2
+      Prefab: {fileID: 1720955334243959655, guid: 1bc4fae260a51b34fb9e94586a6f499a, type: 3}
+      Description: Level 2 of satellite
